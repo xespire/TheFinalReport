@@ -126,7 +126,7 @@ class _MyAppState extends State<MyApp> {  // MyApp的狀態類
               輸入句子為：$sentence''';
 
       final model = ChatGoogleGenerativeAI(
-          apiKey: "AIzaSyA64LawC9SJL5I6PM0ZDQ2JhApEdF2ycpc");
+          apiKey: "aistudio API KEY");
       final prompt = PromptValue.string(inputString);
       final resultJson = await model.invoke(prompt);
 
@@ -147,7 +147,7 @@ class _MyAppState extends State<MyApp> {  // MyApp的狀態類
 
   // @Line 通知
   final String lineNotifyUrl = 'https://notify-api.line.me/api/notify';// Line Notify 的 API 網址
-  final String lineNotifyToken = 'HlLecrGzvTDaesIzcxDRh6l8QOnWs9XMujJU96JdkwD';// Line Notify 的權杖
+  final String lineNotifyToken = 'user token';// Line Notify 的權杖
   var emoID = ['\u2B55','\u274C','\u267B'];
   Future<void> _sendLineNotify(int state,String message) async {
     final headers = {
